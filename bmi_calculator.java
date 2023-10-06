@@ -30,7 +30,9 @@ class calculate_BMI
     public void calculate(String Name, int weight, int height)
     {
         double height_in_metres= height*0.01;
-        double BMI = weight/(height_in_metres*height_in_metres);
+        double bmi;
+        bmi= weight/(height_in_metres*height_in_metres);
+        double BMI = Math.round(bmi*10)/10.0;
         if(BMI<18.5)
         {
             System.out.println("Hey, "+Name+" you're underweight!!");
